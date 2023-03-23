@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #fc2947;
+  --gradient-bg: linear-gradient(45deg, #b6001b, #fc2947, #ff5770);
+}
+
+@keyframes animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+header {
+  height: 110px;
+  background-color: transparent;
+  position: sticky;
+  top: 0px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  transition: all 0.3s ease;
+  color: var(--main-color);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item:hover .nav-link::before {
+  width: 100%;
+}
+
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.logo {
+  width: 140px;
+}
+
+.nav-item {
+  font-size: 1.3rem;
+}
+
+.navbar-nav {
+  padding-left: 9vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sign-in-button {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.sign-in-button:hover {
+  transition: all 0.3s ease;
+  color: var(--main-color);
+}
+
+.register-button {
+  border: none;
+  box-shadow: 5px 5px 4px rgba(252, 41, 71, 0.3);
+  color: white;
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: var(--main-color);
+}
+
+.register-button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+.hero {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.big-style {
+  background-image: var(--main-color);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.p-hero {
+  color: rgb(53, 53, 53);
+  font-size: 0.9rem;
+}
+
+.book-button {
+  background-color: var(--main-color);
+  padding: 15px 23px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 23px;
+  box-shadow: 5px 5px 4px rgba(252, 41, 71, 0.3);
+}
+
+.book-button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+.learn-button:hover {
+  transition: all 0.3s ease;
+  border: 2px solid black;
+  background-color: transparent;
+  color: black;
+}
+.learn-button {
+  border: 2px solid black;
+  margin-left: 9px;
+  background-color: black;
+  padding: 15px 23px;
+
+  border-radius: 5px;
+  color: white;
+}
+
+.hero-col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.london-bg {
+  right: -400px;
+  top: -10px;
+  z-index: -10;
+  position: absolute;
+  width: 1000px;
+}
+
+.hero-img {
+  position: relative;
+  z-index: -5;
+  padding-left: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 65vw;
+}
+
+.info-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-h2 {
+  text-align: center;
+}
+
+.info-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.info-img {
+  width: 150px;
+}
+
+.col-md-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info-img {
+  padding-top: 80px;
+}
+
+.info-h2-body {
+  padding-top: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.info-p-body {
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
+.rental-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 210px;
+  text-align: center;
+}
+
+.rental-header {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.rental-p {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.model-button {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(232, 232, 232);
+  border: none;
+  margin: 6px auto;
+  padding: 15px 30px;
+  width: 300px;
+}
+
+.corsa-btn {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.model-car-img {
+  padding-left: 50px;
+  z-index: -20;
+  max-width: 52vw;
+}
+
+.model-car-col {
+  position: relative;
+  z-index: -30;
+}
+.model-car-col,
+.model-button-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border: 2px solid black;
+}
+
+tr {
+  border-top: 2px solid black;
+}
+
+td {
+  padding: 10px;
+}
+
+.td-3rd {
+  padding-right: 30px;
+}
+
+.table-button {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.3rem;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 0px;
+  margin-top: 5px;
+  border: none;
+  width: 100%;
+  box-shadow: 3px 5px 4px rgba(252, 41, 71, 0.3);
+}
+
+.rental-table-header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: var(--main-color);
+}
+
+.reserve-table {
+  margin-top: 140px;
+}
+
+.car-info-header {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.car-info-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.car-info-p {
+  font-size: 0.9rem;
+}
+
+.promo {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 220px;
+  background-color: rgb(14, 14, 14);
+}
+
+.promo-h2,
+.promo-h3 {
+  color: white;
+}
+
+.promo-h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.twenty-four-seven {
+  color: var(--main-color);
+}
+
+.cars-img {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cars-img-style {
+  width: 80vw;
+}
+
+.why-us-container {
+  margin-top: 90px;
+}
+
+.why-us-container-1 {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.col-style-container {
+  padding-right: 30px;
+}
+
+.col-style-header {
+  font-weight: 600;
+}
+
+.why-us-h2 {
+  color: var(--main-color);
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.why-us-imgs {
+  padding-right: 20px;
+  float: left;
+
+  width: 120px;
+}
+
+.why-us-contaner-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-style-header,
+.why-us-imgs {
+  padding-top: 30px;
+}
+
+.why-us-button {
+  padding-top: 30px;
+  background-color: var(--main-color);
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 3px 5px 4px rgba(252, 41, 71, 0.3);
+}
+
+.why-us-button:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  background-color: rgb(240, 240, 240);
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 120px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.footer-logo {
+  padding-bottom: 30px;
+}
+
+.company {
+  font-size: 2.1rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.number,
+.email {
+  font-size: 1.4rem;
+}
+
+.email {
+  margin-top: 20px;
+}
+
+.second-col-style {
+  text-align: center;
+  padding-left: 40px;
+}
+
+.company-info {
+  cursor: pointer;
+}
+
+.company-info:hover {
+  transition: all 0.3s ease;
+  color: var(--main-color);
+}
+
+.wrk-hrs {
+  font-weight: 600;
+  margin-top: 120px;
+}
+
+.footer-h3 {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 765px) {
+  .ul-container,
+  .navbar-buttons {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-buttons {
+    padding-top: 30px;
+  }
+  .navbar-toggler {
+    margin-right: 20px;
+  }
+  .navbar-nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .reserve-table {
+    margin-top: 50px;
+  }
+  .promo-h2,
+  .promo-h3 {
+    text-align: center;
+    padding: 0px 30px;
+  }
+  .promo-h2 {
+    font-size: 2rem;
+  }
+  .promo-h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .hero-img,
+  .london-bg {
+    display: none;
+  }
+  .hero {
+    padding: auto 30px;
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .model-car-img {
+    padding-top: 30px;
+  }
+  .model-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+  }
+
+  .car-info-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer {
+    text-align: center;
+  }
+  .company {
+    padding-top: 70px;
+  }
+}
+
+@media only screen and (min-width: 765px) and (max-width: 995px) {
+  .model-car-img {
+    padding-left: 240px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .model-car-img {
+    min-width: 710px;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .model-car-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 940px) {
+  .why-us-container .row {
+    flex-direction: column;
+  }
+  .why-us-container .col-md-6 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .why-us-container-1 {
+    padding-bottom: 70px;
+  }
+  .why-us-container-2 {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
