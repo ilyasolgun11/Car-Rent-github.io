@@ -7,6 +7,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
 
@@ -26,9 +27,14 @@ body {
 
 header {
   height: 110px;
-  background-color: transparent;
+  background-color: white;
   position: sticky;
   top: 0px;
+}
+
+.navbar-collapse {
+  padding-bottom: 30px;
+  background-color: white;
 }
 
 .nav-link {
@@ -110,7 +116,7 @@ header {
 }
 
 .big-style {
-  background-image: var(--main-color);
+  color: #fc2947;
 }
 
 h1 {
@@ -507,6 +513,9 @@ td {
   .promo-h3 {
     font-size: 1.4rem;
   }
+  .model-car-img {
+    padding-right: 30px;
+  }
 }
 
 @media only screen and (max-width: 765px) {
@@ -544,6 +553,9 @@ td {
   }
   .company {
     padding-top: 70px;
+  }
+  .email {
+    font-size: 1.2rem;
   }
 }
 
